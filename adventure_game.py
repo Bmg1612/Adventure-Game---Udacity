@@ -1,11 +1,11 @@
 import time
 import random
 
-# I tried to put these list on functions,
-# but i didn't know what to pass as parameters.
+# Here you can set any character you want
 creatures = random.choice(
     ["Spock", "Peter Pan", "Thanos", "Darth Vader"])
 
+# Here you can set any place you want
 some_place = random.choice(
     ["Walmart", "Roman Forum", "Microsoft", "Theater"])
 
@@ -14,7 +14,7 @@ def print_pause(message):
     print(message)
     time.sleep(2)
 
-
+# Intro
 def field():
     print_pause("You find yourself standing in an open field, filled with "
                 "grass and yellow wildflowers.")
@@ -48,6 +48,7 @@ def house(items):
                 f"out steps {creatures}")
     print_pause(f"Eep! This is {creatures}'s house!")
     print_pause(f"{creatures} attacks you!")
+    # Calling the fight scenario
     fight(items)
 
 
@@ -113,5 +114,5 @@ def play_game():
     field()
     main(items)
 
-
-play_game()
+if __name__ == '__main__':
+    play_game()
